@@ -11,7 +11,7 @@ with open('dataset_tvd.pickle', 'rb') as file:
 dataset = dataset[12000:]
 from openai import OpenAI
 
-client = OpenAI(api_key="sk-4177e9cd22b2425e8073ed49213fcae1", base_url="https://api.deepseek.com")
+client = OpenAI(api_key="###", base_url="https://api.deepseek.com")
 
 
 def generate_text(prompt):
@@ -59,4 +59,5 @@ for i in range(len(dataset)):
             with open('dataset_tvd5.pickle', 'wb') as file:
                 pickle.dump(dataset, file)  
     except Exception as e:
+
         print(e)
